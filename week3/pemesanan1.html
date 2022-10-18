@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan Barang 1</title>
+</head>
+<body bgcolor="tan">
+    <form action="#">
+        <h5 align="center">A Web Page</h5>
+        <img src="img/8.png" alt="" width="20"> &nbsp; &nbsp;
+        <img src="img/2.png" alt="" width="20"> &nbsp; &nbsp;
+        <input type="text" name="search" style="width:900px;" value="http://"> &nbsp; &nbsp;
+        <input type="text" class="search" placeholder="Search..." required style="width:200px;">
+        <input type="button" class="button" value="Search">
+    </form>
+    <hr>
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+    <input type="text" name="" align="center" style="width:1200px;" 
+        value="          Home  |
+                                                    Generate Link  |
+                                                    Transaction History  |
+                                                    Policy  |
+                                                Logout    ">
+    &nbsp;
+    <form action="proses.php" method="POST" entype="multipart/form-data">
+        <table>
+            <tr><td><h4>Upload your photo here</h4></td><td></td></tr>
+            <tr><td></td><td><input type="file" value="upload picture"/></td></tr>
+            <tr><td><input type="submit" value="Upload Picture"/></td><td></td></tr>
+        </table>
+    </form>
+    <form action="" method="POST" align="left">
+        <table>
+        <tr>
+            <td><label for="">Title Here</label></td> 
+            <td>: <input type="text" name="titlehere" style="width:400px;" value="MacBook Air $800"></td>
+        </tr>
+        <br>
+        <tr>
+            <td><label for="">Description</label></td> 
+            <td>: <input type="text" name="description" style="width:400px;" value="Year : 2009, Model : 1, Condition : Mint"></td>
+        </tr>
+        <br>
+        <tr>
+            <td><label for="">Account Number</label></td> 
+            <td>: <input type="text" name="accountnumber" style="width:400px;" value="123-456-789-0"></td>
+        </tr> 
+        <br>
+        <tr>
+            <td><label for="">Bank</label></td> 
+            <td>:
+                <select name="" id="" style="width:400px;">
+                    <option value="">HSBC</option>
+                    <option value="">KJMT</option>
+                </select>
+            </td>
+        </tr> 
+        <br>
+        <tr>
+            <td><label for="">Account Holder</label></td>
+            <td>: <input type="text" name="accountholder" style="width:400px;" value="Name Here"></td>
+        </tr> 
+        <br>
+        <tr>
+            <td><label for="">Transaction</label></td>
+            <td>: <select type="number" name="" id="" style="width:40px;">
+                <option value="">1</option>
+                <option value="">2</option>
+            </select>
+        </table>
+            <p>*if the transaction is for 3 person, choose 3 from the drop-down list</p>
+            <ul style="list-style: none;">
+                <li>
+                    <input type="checkbox" id="white" name="crust">
+                    <label for="">Send to Mobile Phone</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="white" name="crust">
+                    <label for="">Send to Email</label>
+                </li>
+            </ul>
+            </td>
+        </tr> 
+        <br>
+        <table>
+        <tr>
+            <td><label for="">Send to Mobile Phone</label></td>
+            <td>: <input type="text" name="accountholder" style="width:400px;" value="1234567890, 1234567891"></td>
+        </tr> 
+        <br>
+        <tr>
+            <td><label for="">Send to Email</label></td>
+            <td>: <input type="text" name="accountholder" style="width:400px;" value="abc@yahoo.com, 123@gmail.com"></td>
+        </tr>
+        </table>
+        <br>
+        <input type="submit" name="" value="Generate Nabr Link">
+    </form>
+</body>
+</html>
