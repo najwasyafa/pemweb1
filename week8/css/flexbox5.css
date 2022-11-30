@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+    margin: 5px;
+    padding: auto;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    min-height: 100vh;
+    background-color: pink;
+}
+
+#main{
+    display: flex;
+    flex: 1; /* menempati ruang kosong di container body */
+}
+
+#main > article{
+    flex: 0 0 76vw; /* menempati sisa ruang yang ada pada flex container main */
+    order: 3;
+    background: tan;
+    height: 35vw;
+    margin: 1px;
+}
+
+#main > aside
+{
+    flex: 0 0 20vw; /* mengatur lebar aside sebesar 20% dari Lebar parent div main*/
+    background: coral;
+    order: 3; /* untuk mengatur urutan item */
+    height: 35vw;
+    margin: 1px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    width: 99%;
+    padding: 0;
+    margin: 0;
+}
+
+.container img{
+    width: 150px;
+    height: 10vw;
+    margin: 1px;
+    border-radius: 0.1cm;
+}
+
+header, footer{
+    background: rgb(140, 182, 210);
+    height: 10vh; /* vh adalah satuan css yang relatif ke layar browser vh = mengatur tinggi layar browser */
+}
+
+header, footer, article, aside{
+    padding: 1cm;
+}
