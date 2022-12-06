@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 3 Menghitung Biaya Parkir</title>
+
+    <script>
+        function parkir(){
+            // biaya parkir 2 jam pertama
+            const duajampertama = 3000; 
+            // biaya parkir per jam berikutnya
+            const perjam = 1000; 
+            // tangkap nilai input jam masuk ke variabel masuk
+            let masuk = document.getElementById("masuk").value;
+            // tangkap nilai input jam keluar ke variabel keluar
+            let keluar = document.getElementById("keluar").value;
+            // total waktu parkir
+            let selisih = keluar - masuk;
+            let biaya = 0;
+            if(selisih <= 2) {
+                biaya = duajampertama;
+            }else {
+                let jamberikutnya = selisih - 2;
+                biaya = duajampertama + (perjam * jamberikutnya);
+            }
+
+            let area_hasil = document.getElementById("hasil");
+            area_hasil.innerHTML = "Biaya parkir anda" + " = " + biaya
+        }
+    </script>
+</head>
+
+<body>
+    <br>
+        <h2>Menghitung Biaya Parkir</h2>
+        Jam Masuk : 
+        <input type="number" value="" id="masuk"><br><br>
+        Jam Keluar :
+        <input type="number" value="" id="keluar">
+        <br><br>
+        <button onclick="parkir()">Hitung</button>
+        <br>
+        <h3>Biaya parkir yang harus dibayar :</h3>
+        <span id="hasil"></span>
+        <br>
+    </fieldset> 
+</body>
+</html>

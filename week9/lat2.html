@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 2 Menghitung Kurs Rupiah</title>
+</head>
+
+<body>
+    <!-- Untuk menghitung rupiah ke dolar -->
+    <h3>Rupiah ke Dolar</h3>
+    <label for="rupiah">Rupiah :</label>
+    <input type="number" id="rupiah">
+    <br>
+    <br>
+    <span id="hasilrupiah"></span>
+    <br>
+    <br>
+    <button type="button" onclick="rupiah()">Hitung</button>
+    <br>
+    <br>
+    <!-- Untuk menghitung dollar ke rupiah -->
+    <h3>Dolar ke Rupiah</h3>
+    <label for="dolar">Dolar :</label>
+    <input type="number" id="dolar">
+    <br>
+    <br>
+    <span id="hasildolar"></span>
+    <br>
+    <br>
+    <button type="button" onclick="dolar()">Hitung</button>
+    <br>
+    
+    <script>
+            function dolar(){
+                let rp = 14650;
+                let d = document.getElementById("dolar").value;
+                let h = d*rp;
+                document.getElementById("hasildolar").innerHTML = "Hasil : Rp." + h;
+            }
+
+            function rupiah(){
+                let rp2 = document.getElementById("rupiah").value;
+                let h = rp2*(1/14650);
+                document.getElementById("hasilrupiah").innerHTML = "Dolar : $" +h.toFixed(2);
+            }
+    </script>
+</body>
+</html>

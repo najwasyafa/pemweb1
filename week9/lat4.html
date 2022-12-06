@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Soal 4 Menghitung Jumlah Dua Bilangan</title>
+</head>
+
+<body>
+    <h3>Menghitung Jumlah Dua Bilangan</h3>
+    <form onchange="hitung()">
+        <input type="number" id="bil1">
+        <br>
+        <b>+</b>
+        <br>
+        <input type="number" id="bil2">
+        <br>
+        <b>=</b>
+        <br>
+        <input type="number" id="bil3">    
+    </form>
+
+    <script>
+        function hitung(){
+            let atas = parseInt(document.getElementById("bil1").value);
+            let tengah = parseInt(document.getElementById("bil2").value);
+            let bawah = atas + tengah;
+            document.getElementById("bil3").value = bawah;
+        }
+    </script>
+</body>
+</html>
