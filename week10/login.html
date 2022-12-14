@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body{
+            margin-top: 150px;
+            margin-left: 500px;
+            margin-right: 500px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Login</legend>
+        <center>
+            <form method="REQUEST">
+                Username :
+                <br>
+                <input type="text" placeholder="Masukkan username" name="username" id="username" class="username">
+                <br>
+                Password :
+                <br>
+                <input type="password" placeholder="Masukkan password" name="password" id="password" class="password">
+                <br>
+                <button type="submit">Login</button>
+            </form>
+        </center>
+    </fieldset>
+
+    <!-- tuliskan script nya -->
+    <script>
+        function login(){
+            // ambil nilai username
+            document.getElementById("username").value;
+
+            // ambil nilai password
+            password = document.getElementById("password").value;
+            
+            // cek apakah password dan username benar, jika benar arahkan ke halaman landing page
+            if (username == "admin" && password == "123456789"){
+                window.location = "index.html";
+                return false;
+            }
+            // jika username dan password kosong, tampilkan username/password kosong
+            else if (username == "" || password == ""){
+                alert("username / password tidak boleh kosong");
+                return false;
+            }
+            // lalu jika password yang di inputkan kurang dari 6 maka tampilkan password kosong dari 6
+            else if (password.length < 6){
+                alert("Password kurang dari 6");
+                return false;
+            }
+            // jika salah tampilkan password dan username salah
+            else {
+                alert("username / password salah");
+            }   
+        }
+    </script>
+</body>
+</html>

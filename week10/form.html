@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        body{
+            background-color: white;
+            margin: 0;
+        }
+
+        .form{
+            background-color: #FAEBD7;
+            border: 3px solid black;
+            width: 400px;
+            padding: 10px;
+            margin: 400px 35%;
+            border-radius: 1vh;
+            display: flex;
+        }
+
+        .hasil-tiket{
+            background-color: tan;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<script>
+    // buat validasi nama
+    function validasi(){
+        let nama_ = document.getElementById("nama").value;
+
+        if(nama_ == ""){
+            document.getElementById("valid-nama").innerHTML = ("Silahkan Masukan Nama");
+        }
+        else{
+            document.getElementById("valid-nama").innerHTML = (" ");
+        }
+    // buat validasi email
+        let email_ = document.getElementById("email").value;
+
+        if(email_.indexOf("@")!=-1 && email_.indexOf(".")!=-1){
+            document.getElementById("valid-email").innerHTML = (" ");
+        }
+        else if(email_ == ""){
+            document.getElementById("valid-email").innerHTML = ("Silahkan Masukan Email");
+        }
+        else{
+            document.getElementById("valid-nama").innerHTML = ("Email tidak valid");
+        }
+        // buat validasi jam keberangkatan
+        let jam_ = document.getElementById("jam").value;
+        if (jam_ == ""){
+            document.getElementById("valid-jam").innerHTML = ("Silahkan Masukan Jam Keberangkatan");
+        }
+        else{
+            document.getElementById("valid-jam").innerHTML = (" ");
+        }
+        // buat validasi tujuan
+        let tujuan_ = document.getElementById("tujuan").value;
+        if(tujuan_ == ""){
+            document.getElementById("valid-tujuan").innerHTML = ("Silahkan Masukan Tujuan");
+        }
+        else{
+            document.getElementById("valid-tujuan").innerHTML = (" ");
+        }
+        // buat validasi tiket
+        let tiket_ = document.getElementById("tiket").value;
+        if(tiket_ == ""){
+            document.getElementById("valid-tiket").innerHTML = ("Silahkan Pilih Jumlah Tiket");
+        }
+        else{
+            document.getElementById("valid-tiket").innerHTML = (" ");
+        }
+
+        //hasil input
+        let konfrm_nama = document.getElementById("nama").value;
+        let konfrm_email = document.getElementById("email").value;
+        let konfrm_jam = document.getElementById("jam").value;
+        let konfrm_tujuan = document.getElementById("tujuan").value;
+        let konfrm_tiket = document.getElementById("tiket").value;
+
+        document.getElementById("knfrm-nama").innerHTML = konfrm_nama;
+        document.getElementById("knfrm-email").innerHTML = konfrm_email;
+        document.getElementById("knfrm-jam").innerHTML = konfrm_jam;
+        document.getElementById("knfrm-tujuan").innerHTML = konfrm_tujuan;
+        document.getElementById("knfrm-tiket").innerHTML = konfrm_tiket;
+    }
+</script>
+
+<body>
+    <div class="form">
+        <form action="" onsubmit="return false">
+            <label for="nama" name="nama">Nama :</label>
+            <input type="text" id="nama" maxlength="40">
+            <br>
+            <span id="valid-nama" style="color: aquamarine; font-weight: bold;"></span>
+            <br>
+            <label for="email">Email :</label>
+            <input type="text" name="email" id="email">
+            <br>
+            <span style="color: aquamarine; font-weight: bold;" id="valid-email"></span>
+            <br>
+            <label for="jam">Jam Keberangkatan :</label>
+            <input type="time" id="jam">
+            <br>
+            <span style="color: aquamarine; font-weight: bold;" id="valid-jam"></span>
+            <br>
+            <label for="tujuan">Tujuan :</label>
+            <input type="text" name="tujuan" id="tujuan">
+            <br>
+            <span style="color: aquamarine; font-weight: bold;" id="valid-tujuan"></span>
+            <br>
+            <label for="tiket">Jumlah Tiket</label>
+                <select name="tiket" id="tiket">
+                    <option hidden>0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
+                <br>
+                <span style="color: aquamarine; font-weight: bold;" id="valid-tiket"></span>
+                <br>
+                <input type="submit" name="send" id="kirim" onclick="validasi()">
+                </form>
+                <br>
+                <div class="hasil-tiket">
+                    <h3>Konfirmasi Tiket Keberangkatan</h3>
+                    <p>
+                        Nama : <span id="knfrm-nama"></span><br>
+                        Alamat Email : <span id="knfrm-email"></span><br>
+                        Jam Keberangkatan : <span id="knfrm-jam"></span><br>
+                        Tujuan : <span id="knfrm-tujuan"></span><br>
+                        Jumlah Tiket : <span id="knfrm-tiket"></span><br>
+                    </p>
+                </div>
+                </div>
+</body>
+</html>
